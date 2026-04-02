@@ -1214,7 +1214,7 @@ export default function QuranTranslationLandingPage() {
                     <div>
                       <p className="text-xs text-white/60 sm:text-sm">Lugha ya sasa</p>
                       <h3 className="mt-1 text-xl font-bold sm:text-2xl">
-                        Qurani kwa Kiarabu
+                        Qur'an kwa Kiswahili
                       </h3>
                     </div>
                     <div className="w-fit rounded-2xl border border-[#6E8FB3]/25 bg-[#A69498]/18 px-4 py-2 text-xs text-[#DCE8F5] sm:text-sm">
