@@ -631,7 +631,7 @@ function HeroAudioPlayer({ isMobile }) {
           {formatTime(currentTime)}
         </div>
 
-        <div className="relative h-2 w-full flex-1 overflow-visible rounded-full bg-[#44536B]">
+        <div className="relative h-2 w-full flex-1 overflow-visible rounded-full bg-[#274463]">
           <div
             className="absolute inset-y-0 left-0 rounded-full bg-gradient-to-r from-[#8C6A43] via-[#D6B16F] to-[#6E8FB3]"
             style={{ width: `${progress}%` }}
@@ -946,7 +946,7 @@ function ProtectedHlsVideoCard({
             {formatTime(currentTime)}
           </div>
 
-          <div className="relative h-2 w-full flex-1 overflow-visible rounded-full bg-[#44536B]">
+          <div className="relative h-2 w-full flex-1 overflow-visible rounded-full bg-[#274463]">
             <div
               className="absolute inset-y-0 left-0 rounded-full bg-gradient-to-r from-[#8C6A43] via-[#D6B16F] to-[#6E8FB3]"
               style={{ width: `${progress}%` }}
@@ -1017,7 +1017,7 @@ export default function QuranTranslationLandingPage() {
         dir="ltr"
         className="relative min-h-screen overflow-hidden bg-transparent text-white selection:bg-[#E7C58F]/28"
       >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(232,199,144,0.10),transparent_28%),radial-gradient(circle_at_82%_18%,rgba(103,125,166,0.18),transparent_24%),radial-gradient(circle_at_18%_82%,rgba(146,108,92,0.16),transparent_22%),linear-gradient(180deg,#060A12_0%,#0A1120_34%,#1E2940_66%,#4D3D38_100%)]" />
+        <div className="absolute inset-0 bg-[#0F223A]" />
 
         {!isMobile && (
           <>
@@ -1335,7 +1335,7 @@ export default function QuranTranslationLandingPage() {
               className={`relative overflow-hidden p-5 sm:p-6 md:p-10 ${gradientOuterCard}`}
             >
               {!isMobile && (
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(130,110,116,0.20),transparent_28%),radial-gradient(circle_at_80%_80%,rgba(231,197,143,0.14),transparent_34%)]" />
+                <div className="absolute inset-0 bg-[#0F223A]" />
               )}
 
               <div className="relative z-10">
@@ -1609,7 +1609,7 @@ export default function QuranTranslationLandingPage() {
                     Sana... Ujumbe kwa walimwengu
                   </div>
 
-                  <p className="mx-auto mt-4 max-w-[30rem] rounded-[1.4rem] border border-white/10 bg-[#1B2F4A] px-4 py-4 text-sm leading-7 text-white/78 sm:px-5 sm:text-base sm:leading-8">
+                  <p className="mx-auto mt-4 max-w-[30rem] rounded-[1.4rem] border border-[#0F223A] bg-[#0F223A] px-4 py-4 text-sm leading-7 text-white/78 sm:px-5 sm:text-base sm:leading-8">
                     Vituo vya sauti na picha vya tafsiri za maana za Qurani Tukufu kwa lugha zote
                     za kimataifa, katika mradi wa wakfu unaounganisha uzuri wa uwasilishaji, usahihi wa maana, na roho
                     Ujumbe.
