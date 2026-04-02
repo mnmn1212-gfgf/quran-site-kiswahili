@@ -54,17 +54,22 @@ const fadeUp = {
   }),
 };
 
-const crystalFloat = (xRange, yRange, scaleRange, duration) => ({
-  x: xRange,
-  y: yRange,
-  scale: scaleRange,
+const pulseGlow = {
+  opacity: [0.2, 0.45, 0.2],
+  scale: [1, 1.03, 1],
+  transition: { duration: 6, repeat: Infinity, ease: "easeInOut" },
+};
+
+const sheenSweep = {
+  x: ["-18%", "118%", "-18%"],
+  opacity: [0, 0.22, 0],
   transition: {
-    duration,
+    duration: 12,
     repeat: Infinity,
-    repeatType: "mirror",
     ease: "easeInOut",
+    times: [0, 0.45, 1],
   },
-});
+};
 
 const containerClass =
   "relative z-10 mx-auto w-full max-w-[1680px] px-4 sm:px-6 lg:px-10 xl:px-14";
@@ -208,39 +213,6 @@ const portfolioVideos = [
   `${import.meta.env.BASE_URL}videos/v1.mp4`,
   `${import.meta.env.BASE_URL}videos/v2.mp4`,
   `${import.meta.env.BASE_URL}videos/v3.mp4`,
-];
-
-const crystalOrbs = [
-  {
-    className:
-      "left-[-4%] top-[7%] h-40 w-40 sm:h-52 sm:w-52 rounded-full border border-white/10 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.18),rgba(255,255,255,0.06)_34%,rgba(110,143,179,0.08)_60%,transparent_72%)] backdrop-blur-[3px] shadow-[inset_0_1px_12px_rgba(255,255,255,0.12),0_12px_30px_rgba(0,0,0,0.10)]",
-    animate: crystalFloat([0, 18, 0], [0, 12, 0], [1, 1.04, 1], 18),
-  },
-  {
-    className:
-      "right-[6%] top-[14%] h-24 w-24 sm:h-32 sm:w-32 rounded-full border border-white/10 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.16),rgba(255,255,255,0.05)_32%,rgba(232,199,144,0.08)_58%,transparent_72%)] backdrop-blur-[2px] shadow-[inset_0_1px_10px_rgba(255,255,255,0.10),0_10px_24px_rgba(0,0,0,0.08)]",
-    animate: crystalFloat([0, -16, 0], [0, 14, 0], [1, 1.05, 1], 16),
-  },
-  {
-    className:
-      "left-[12%] top-[42%] h-20 w-20 sm:h-28 sm:w-28 rounded-full border border-white/10 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.14),rgba(255,255,255,0.05)_30%,rgba(199,212,229,0.08)_58%,transparent_72%)] backdrop-blur-[2px] shadow-[inset_0_1px_10px_rgba(255,255,255,0.10),0_8px_22px_rgba(0,0,0,0.08)]",
-    animate: crystalFloat([0, 10, 0], [0, -12, 0], [1, 1.03, 1], 14),
-  },
-  {
-    className:
-      "right-[14%] top-[48%] h-32 w-32 sm:h-44 sm:w-44 rounded-full border border-white/10 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.16),rgba(255,255,255,0.05)_32%,rgba(110,143,179,0.07)_58%,transparent_72%)] backdrop-blur-[3px] shadow-[inset_0_1px_12px_rgba(255,255,255,0.12),0_12px_28px_rgba(0,0,0,0.08)]",
-    animate: crystalFloat([0, -18, 0], [0, 16, 0], [1, 1.04, 1], 20),
-  },
-  {
-    className:
-      "left-[38%] bottom-[10%] h-28 w-28 sm:h-36 sm:w-36 rounded-full border border-white/10 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.14),rgba(255,255,255,0.05)_30%,rgba(232,199,144,0.07)_56%,transparent_72%)] backdrop-blur-[2px] shadow-[inset_0_1px_10px_rgba(255,255,255,0.10),0_8px_24px_rgba(0,0,0,0.08)]",
-    animate: crystalFloat([0, 14, 0], [0, -10, 0], [1, 1.04, 1], 17),
-  },
-  {
-    className:
-      "right-[-3%] bottom-[7%] h-44 w-44 sm:h-56 sm:w-56 rounded-full border border-white/10 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.16),rgba(255,255,255,0.05)_34%,rgba(199,212,229,0.08)_60%,transparent_74%)] backdrop-blur-[3px] shadow-[inset_0_1px_12px_rgba(255,255,255,0.12),0_14px_34px_rgba(0,0,0,0.10)]",
-    animate: crystalFloat([0, -14, 0], [0, 12, 0], [1, 1.05, 1], 21),
-  },
 ];
 
 function useIsMobile() {
@@ -1058,16 +1030,9 @@ export default function QuranTranslationLandingPage() {
       >
         <div className="absolute inset-0 bg-[#0F223A]" />
 
+        {/* Soft cinematic lighting (clean – no pattern, no noise) */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_24%,rgba(232,199,144,0.10),transparent_34%),radial-gradient(circle_at_76%_20%,rgba(110,143,179,0.10),transparent_38%),radial-gradient(circle_at_50%_82%,rgba(255,255,255,0.045),transparent_48%),radial-gradient(circle_at_30%_60%,rgba(199,212,229,0.05),transparent_36%)]" />
-          {!isMobile &&
-            crystalOrbs.map((orb, index) => (
-              <motion.div
-                key={index}
-                className={`absolute ${orb.className}`}
-                animate={orb.animate}
-              />
-            ))}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(232,199,144,0.10),transparent_40%),radial-gradient(circle_at_75%_25%,rgba(110,143,179,0.10),transparent_45%),radial-gradient(circle_at_50%_80%,rgba(255,255,255,0.05),transparent_55%)]" />
         </div>
 
         <div className={containerClass}>
