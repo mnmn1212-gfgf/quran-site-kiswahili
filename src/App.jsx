@@ -61,15 +61,13 @@ const pulseGlow = {
 };
 
 const sheenSweep = {
-  x: ["-35%", "130%", "-35%"],
-  y: ["8%", "-6%", "8%"],
-  rotate: [-16, -16, -16],
-  opacity: [0, 0.28, 0],
+  x: ["-18%", "118%", "-18%"],
+  opacity: [0, 0.22, 0],
   transition: {
-    duration: 14,
+    duration: 12,
     repeat: Infinity,
-    ease: [0.22, 1, 0.36, 1],
-    times: [0, 0.48, 1],
+    ease: "easeInOut",
+    times: [0, 0.45, 1],
   },
 };
 
@@ -1031,12 +1029,8 @@ export default function QuranTranslationLandingPage() {
         className="relative min-h-screen overflow-hidden bg-transparent text-white selection:bg-[#E7C58F]/28"
       >
         <div className="absolute inset-0 bg-[#0F223A]" />
-
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_14%_18%,rgba(232,199,144,0.12)_0,rgba(232,199,144,0.12)_1.4px,transparent_1.6px),radial-gradient(circle_at_64%_28%,rgba(255,255,255,0.08)_0,rgba(255,255,255,0.08)_1px,transparent_1.2px),linear-gradient(45deg,transparent_46%,rgba(232,199,144,0.08)_47%,rgba(232,199,144,0.08)_53%,transparent_54%),linear-gradient(-45deg,transparent_46%,rgba(232,199,144,0.08)_47%,rgba(232,199,144,0.08)_53%,transparent_54%)] bg-[size:54px_54px,28px_28px,108px_108px,108px_108px] opacity-[0.10]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_24%,rgba(232,199,144,0.18)_0,rgba(232,199,144,0.18)_1.5px,transparent_1.7px),radial-gradient(circle_at_78%_74%,rgba(255,255,255,0.12)_0,rgba(255,255,255,0.12)_1px,transparent_1.2px),linear-gradient(45deg,transparent_46%,rgba(232,199,144,0.10)_47%,rgba(232,199,144,0.10)_53%,transparent_54%),linear-gradient(-45deg,transparent_46%,rgba(232,199,144,0.10)_47%,rgba(232,199,144,0.10)_53%,transparent_54%)] bg-[size:62px_62px,30px_30px,124px_124px,124px_124px] [mask-image:radial-gradient(circle_at_18%_26%,black_0%,black_22%,transparent_48%),radial-gradient(circle_at_80%_76%,black_0%,black_18%,transparent_42%)] [mask-composite:intersect] opacity-[0.50]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_52%,rgba(232,199,144,0.22)_0,rgba(232,199,144,0.22)_1.6px,transparent_1.9px),linear-gradient(45deg,transparent_46%,rgba(232,199,144,0.12)_47%,rgba(232,199,144,0.12)_53%,transparent_54%),linear-gradient(-45deg,transparent_46%,rgba(232,199,144,0.12)_47%,rgba(232,199,144,0.12)_53%,transparent_54%)] bg-[size:58px_58px,116px_116px,116px_116px] [mask-image:radial-gradient(circle_at_52%_54%,black_0%,black_18%,transparent_34%)] opacity-[1]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_80%,rgba(232,199,144,0.16)_0,rgba(232,199,144,0.16)_1.4px,transparent_1.7px),linear-gradient(45deg,transparent_46%,rgba(232,199,144,0.08)_47%,rgba(232,199,144,0.08)_53%,transparent_54%),linear-gradient(-45deg,transparent_46%,rgba(232,199,144,0.08)_47%,rgba(232,199,144,0.08)_53%,transparent_54%)] bg-[size:60px_60px,118px_118px,118px_118px] [mask-image:radial-gradient(circle_at_12%_78%,black_0%,black_14%,transparent_30%),radial-gradient(circle_at_86%_18%,black_0%,black_12%,transparent_28%)] [mask-composite:intersect] opacity-[0.30]" />
+        <div className="absolute inset-0 opacity-[0.055]">
+          <div className="h-full w-full bg-[radial-gradient(circle_at_24px_24px,rgba(232,199,144,0.16)_2px,transparent_2.4px),radial-gradient(circle_at_0_0,rgba(255,255,255,0.03)_1px,transparent_1.4px),linear-gradient(45deg,transparent_46%,rgba(232,199,144,0.06)_47%,rgba(232,199,144,0.06)_53%,transparent_54%),linear-gradient(-45deg,transparent_46%,rgba(232,199,144,0.06)_47%,rgba(232,199,144,0.06)_53%,transparent_54%)] bg-[size:48px_48px,24px_24px,96px_96px,96px_96px]" />
         </div>
 
         {!isMobile && (
@@ -1046,7 +1040,7 @@ export default function QuranTranslationLandingPage() {
               animate={pulseGlow}
             />
             <motion.div
-              className="pointer-events-none absolute -left-[42%] top-[-18%] h-[140%] w-[36%] bg-[linear-gradient(90deg,transparent_0%,rgba(255,255,255,0.00)_18%,rgba(232,199,144,0.10)_38%,rgba(255,255,255,0.18)_50%,rgba(232,199,144,0.10)_62%,rgba(255,255,255,0.00)_82%,transparent_100%)] blur-[26px]"
+              className="pointer-events-none absolute -left-[24%] top-0 h-full w-[42%] skew-x-[-18deg] bg-[linear-gradient(90deg,transparent_0%,rgba(255,255,255,0.00)_18%,rgba(232,199,144,0.10)_42%,rgba(255,255,255,0.18)_50%,rgba(232,199,144,0.10)_58%,rgba(255,255,255,0.00)_82%,transparent_100%)] blur-[22px]"
               animate={sheenSweep}
             />
             <div className="absolute inset-0 opacity-[0.035]">
