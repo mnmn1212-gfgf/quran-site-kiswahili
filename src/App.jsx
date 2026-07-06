@@ -74,9 +74,9 @@ const sheenSweep = {
 const containerClass =
   "relative z-10 mx-auto w-full max-w-[1680px] px-4 sm:px-6 lg:px-10 xl:px-14";
 const glass =
-  "border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] md:backdrop-blur-xl backdrop-blur-sm shadow-[0_18px_40px_rgba(0,0,0,0.24)]";
+  "  bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] md:backdrop-blur-xl backdrop-blur-sm shadow-[0_18px_40px_rgba(0,0,0,0.24)]";
 const softCard = `rounded-[2rem] ${glass}`;
-const gradientOuterCard = `rounded-[2rem] border border-white/40 ${OUTER_GRADIENT} md:backdrop-blur-xl backdrop-blur-sm shadow-[0_8px_22px_rgba(0,0,0,0.14)]`;
+const gradientOuterCard = `rounded-[2rem]   ${OUTER_GRADIENT} md:backdrop-blur-xl backdrop-blur-sm shadow-[0_8px_22px_rgba(0,0,0,0.14)]`;
 
 const navItems = [
   { label: "Sisi ni nani", href: "#about" },
@@ -232,7 +232,7 @@ function sectionBadge(icon, text, textColor = "text-white") {
   const Icon = icon;
   return (
     <div
-      className={`inline-flex max-w-full items-center gap-3 rounded-full border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] px-4 py-2.5 text-xs font-semibold ${textColor} backdrop-blur-md shadow-[0_6px_18px_rgba(0,0,0,0.14)] sm:px-5 sm:py-3 sm:text-sm`}
+      className={`inline-flex max-w-full items-center gap-3 rounded-full   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] px-4 py-2.5 text-xs font-semibold ${textColor} backdrop-blur-md shadow-[0_6px_18px_rgba(0,0,0,0.14)] sm:px-5 sm:py-3 sm:text-sm`}
     >
       <Icon className="h-4 w-4 sm:h-5 sm:w-5" style={{ color: ACCENT }} />
       <span className="truncate">{text}</span>
@@ -243,7 +243,7 @@ function sectionBadge(icon, text, textColor = "text-white") {
 function LargeSectionBadge({ icon: Icon, text }) {
   return (
     <div
-      className="inline-flex max-w-full items-center gap-3 rounded-full border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] px-5 py-3 text-base font-bold backdrop-blur-md shadow-[0_6px_18px_rgba(0,0,0,0.14)] sm:px-8 sm:py-4 sm:text-xl lg:text-2xl"
+      className="inline-flex max-w-full items-center gap-3 rounded-full   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] px-5 py-3 text-base font-bold backdrop-blur-md shadow-[0_6px_18px_rgba(0,0,0,0.14)] sm:px-8 sm:py-4 sm:text-xl lg:text-2xl"
       style={{ color: ACCENT }}
     >
       <Icon className="h-5 w-5 shrink-0 sm:h-7 sm:w-7" style={{ color: ACCENT }} />
@@ -566,14 +566,14 @@ function HeroAudioPlayer({ isMobile }) {
   };
 
   return (
-    <div className="mt-5 rounded-[1.35rem] border border-white/40 bg-[linear-gradient(135deg,rgba(2,18,24,0.99)_0%,rgba(0,54,66,0.98)_35%,rgba(0,116,91,0.95)_68%,rgba(198,145,45,0.90)_100%)] p-3 sm:p-4">
+    <div className="mt-5 rounded-[1.35rem]   bg-[linear-gradient(135deg,rgba(2,18,24,0.99)_0%,rgba(0,54,66,0.98)_35%,rgba(0,116,91,0.95)_68%,rgba(198,145,45,0.90)_100%)] p-3 sm:p-4">
       <audio
         ref={audioRef}
         preload="metadata"
         onContextMenu={(e) => e.preventDefault()}
       />
 
-      <div className="mb-4 flex h-14 items-end gap-[2px] overflow-hidden rounded-2xl border border-white/40 bg-[linear-gradient(135deg,rgba(2,18,24,0.42)_0%,rgba(0,54,66,0.34)_56%,rgba(0,116,91,0.24)_100%)] px-2 py-3 sm:h-18">
+      <div className="mb-4 flex h-14 items-end gap-[2px] overflow-hidden rounded-2xl   bg-[linear-gradient(135deg,rgba(2,18,24,0.42)_0%,rgba(0,54,66,0.34)_56%,rgba(0,116,91,0.24)_100%)] px-2 py-3 sm:h-18">
         {bars.map((height, index) => (
           <motion.div
             key={index}
@@ -589,7 +589,7 @@ function HeroAudioPlayer({ isMobile }) {
         <button
           type="button"
           onClick={togglePlay}
-          className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] text-white transition hover:bg-[#02535F]"
+          className="flex h-10 w-10 items-center justify-center rounded-2xl   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] text-white transition hover:bg-[#02535F]"
           aria-label={isPlaying ? "Sitisha" : "Cheza"}
         >
           {isPlaying ? (
@@ -602,7 +602,7 @@ function HeroAudioPlayer({ isMobile }) {
         <button
           type="button"
           onClick={() => seekBy(-10)}
-          className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] text-white transition hover:bg-[#02535F]"
+          className="flex h-10 w-10 items-center justify-center rounded-2xl   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] text-white transition hover:bg-[#02535F]"
           aria-label="Rudi nyuma"
         >
           <SkipBack className="h-4 w-4" style={{ color: ACCENT }} />
@@ -611,7 +611,7 @@ function HeroAudioPlayer({ isMobile }) {
         <button
           type="button"
           onClick={replay}
-          className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] text-white transition hover:bg-[#02535F]"
+          className="flex h-10 w-10 items-center justify-center rounded-2xl   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] text-white transition hover:bg-[#02535F]"
           aria-label="Anza tena"
         >
           <RotateCcw className="h-4 w-4" style={{ color: ACCENT }} />
@@ -620,7 +620,7 @@ function HeroAudioPlayer({ isMobile }) {
         <button
           type="button"
           onClick={() => seekBy(10)}
-          className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] text-white transition hover:bg-[#02535F]"
+          className="flex h-10 w-10 items-center justify-center rounded-2xl   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] text-white transition hover:bg-[#02535F]"
           aria-label="Songa mbele"
         >
           <SkipForward className="h-4 w-4" style={{ color: ACCENT }} />
@@ -629,7 +629,7 @@ function HeroAudioPlayer({ isMobile }) {
         <button
           type="button"
           onClick={toggleMute}
-          className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] text-white transition hover:bg-[#02535F]"
+          className="flex h-10 w-10 items-center justify-center rounded-2xl   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] text-white transition hover:bg-[#02535F]"
           aria-label="Sauti"
         >
           <Volume2
@@ -692,16 +692,16 @@ function StructuredCard({ icon: Icon, title, desc, isMobile }) {
       whileHover={isMobile ? {} : { y: -6, scale: 1.01 }}
       className={`${gradientOuterCard} h-full p-4 sm:p-5`}
     >
-      <div className="h-full rounded-[1.5rem] border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] p-4">
-        <div className="flex items-center gap-3 rounded-2xl border border-white/40 bg-gradient-to-r from-white/5 to-white/10 px-4 py-3">
-          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)]">
+      <div className="h-full rounded-[1.5rem]   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] p-4">
+        <div className="flex items-center gap-3 rounded-2xl   bg-gradient-to-r from-white/5 to-white/10 px-4 py-3">
+          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)]">
             <Icon className="h-5 w-5" style={{ color: ACCENT }} />
           </div>
           <h3 className="text-base font-bold leading-7 text-white sm:text-lg lg:text-xl">
             {title}
           </h3>
         </div>
-        <div className="mt-4 rounded-2xl border border-white/40 bg-[linear-gradient(135deg,rgba(2,18,24,0.99)_0%,rgba(0,54,66,0.98)_35%,rgba(0,116,91,0.95)_68%,rgba(198,145,45,0.90)_100%)] px-4 py-4 text-sm leading-7 text-white/78 sm:text-base sm:leading-8">
+        <div className="mt-4 rounded-2xl   bg-[linear-gradient(135deg,rgba(2,18,24,0.99)_0%,rgba(0,54,66,0.98)_35%,rgba(0,116,91,0.95)_68%,rgba(198,145,45,0.90)_100%)] px-4 py-4 text-sm leading-7 text-white/78 sm:text-base sm:leading-8">
           {desc}
         </div>
       </div>
@@ -715,13 +715,13 @@ function IdentityCard({ icon: Icon, title, text, large = false, isMobile }) {
       whileHover={isMobile ? {} : { y: -6, scale: 1.01 }}
       className={`${softCard} h-full p-4 sm:p-5`}
     >
-      <div className="h-full rounded-[1.5rem] border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] p-4">
-        <div className="flex items-center gap-3 rounded-2xl border border-white/40 bg-gradient-to-r from-white/5 to-white/10 px-4 py-3">
-          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)]">
+      <div className="h-full rounded-[1.5rem]   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] p-4">
+        <div className="flex items-center gap-3 rounded-2xl   bg-gradient-to-r from-white/5 to-white/10 px-4 py-3">
+          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)]">
             <Icon className="h-5 w-5" style={{ color: ACCENT }} />
           </div>
           <div
-            className={`rounded-2xl border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] px-4 py-2 font-bold text-white ${
+            className={`rounded-2xl   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] px-4 py-2 font-bold text-white ${
               large ? "text-lg sm:text-xl" : "text-base sm:text-lg"
             }`}
           >
@@ -729,7 +729,7 @@ function IdentityCard({ icon: Icon, title, text, large = false, isMobile }) {
           </div>
         </div>
         <div
-          className={`mt-4 rounded-2xl border border-white/40 bg-[linear-gradient(135deg,rgba(2,18,24,0.99)_0%,rgba(0,54,66,0.98)_35%,rgba(0,116,91,0.95)_68%,rgba(198,145,45,0.90)_100%)] px-4 py-4 text-white/80 ${
+          className={`mt-4 rounded-2xl   bg-[linear-gradient(135deg,rgba(2,18,24,0.99)_0%,rgba(0,54,66,0.98)_35%,rgba(0,116,91,0.95)_68%,rgba(198,145,45,0.90)_100%)] px-4 py-4 text-white/80 ${
             large
               ? "text-base leading-8 sm:text-lg sm:leading-9 lg:text-xl lg:leading-10"
               : "text-base leading-8 sm:text-lg"
@@ -748,16 +748,16 @@ function ImpactCard({ icon: Icon, title, desc, isMobile }) {
       whileHover={isMobile ? {} : { y: -6, scale: 1.01 }}
       className={`${softCard} h-full p-4 sm:p-5`}
     >
-      <div className="h-full rounded-[1.5rem] border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] p-4">
-        <div className="flex items-center gap-3 rounded-2xl border border-white/40 bg-gradient-to-r from-white/5 to-white/10 px-4 py-3">
-          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)]">
+      <div className="h-full rounded-[1.5rem]   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] p-4">
+        <div className="flex items-center gap-3 rounded-2xl   bg-gradient-to-r from-white/5 to-white/10 px-4 py-3">
+          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)]">
             <Icon className="h-5 w-5" style={{ color: ACCENT }} />
           </div>
           <h3 className="text-base font-bold text-white sm:text-lg lg:text-xl">
             {title}
           </h3>
         </div>
-        <div className="mt-4 rounded-2xl border border-white/40 bg-[linear-gradient(135deg,rgba(2,18,24,0.99)_0%,rgba(0,54,66,0.98)_35%,rgba(0,116,91,0.95)_68%,rgba(198,145,45,0.90)_100%)] px-4 py-4 text-sm leading-7 text-white/78 sm:text-base sm:leading-8">
+        <div className="mt-4 rounded-2xl   bg-[linear-gradient(135deg,rgba(2,18,24,0.99)_0%,rgba(0,54,66,0.98)_35%,rgba(0,116,91,0.95)_68%,rgba(198,145,45,0.90)_100%)] px-4 py-4 text-sm leading-7 text-white/78 sm:text-base sm:leading-8">
           {desc}
         </div>
       </div>
@@ -887,7 +887,7 @@ function ProtectedHlsVideoCard({
       whileHover={isMobile ? {} : { y: -6, scale: 1.01 }}
       className={`${softCard} p-3 sm:p-4`}
     >
-      <div className="relative overflow-hidden rounded-[1.4rem] border border-white/40 bg-[linear-gradient(135deg,rgba(2,18,24,0.99)_0%,rgba(0,54,66,0.98)_35%,rgba(0,116,91,0.95)_68%,rgba(198,145,45,0.90)_100%)]">
+      <div className="relative overflow-hidden rounded-[1.4rem]   bg-[linear-gradient(135deg,rgba(2,18,24,0.99)_0%,rgba(0,54,66,0.98)_35%,rgba(0,116,91,0.95)_68%,rgba(198,145,45,0.90)_100%)]">
         <video
           ref={videoRef}
           src={video}
@@ -906,23 +906,23 @@ function ProtectedHlsVideoCard({
             className="absolute inset-0 flex items-center justify-center bg-[linear-gradient(135deg,rgba(2,18,24,0.42)_0%,rgba(0,54,66,0.34)_56%,rgba(0,116,91,0.24)_100%)] transition hover:bg-[linear-gradient(135deg,rgba(2,18,24,0.42)_0%,rgba(0,54,66,0.34)_56%,rgba(0,116,91,0.24)_100%)]"
             aria-label="Cheza video"
           >
-            <span className="flex h-16 w-16 items-center justify-center rounded-full border border-white/40 bg-[#02535F] backdrop-blur-md shadow-[0_0_22px_rgba(39,121,167,0.22)] sm:h-18 sm:w-18">
+            <span className="flex h-16 w-16 items-center justify-center rounded-full   bg-[#02535F] backdrop-blur-md shadow-[0_0_22px_rgba(39,121,167,0.22)] sm:h-18 sm:w-18">
               <Play className="mr-1 h-7 w-7 text-white" />
             </span>
           </button>
         )}
 
-        <div className="pointer-events-none absolute left-3 top-3 rounded-full border border-white/40 bg-[linear-gradient(135deg,rgba(2,18,24,0.99)_0%,rgba(0,54,66,0.98)_35%,rgba(0,116,91,0.95)_68%,rgba(198,145,45,0.90)_100%)] px-3 py-1 text-[11px] text-white/80 backdrop-blur-md">
+        <div className="pointer-events-none absolute left-3 top-3 rounded-full   bg-[linear-gradient(135deg,rgba(2,18,24,0.99)_0%,rgba(0,54,66,0.98)_35%,rgba(0,116,91,0.95)_68%,rgba(198,145,45,0.90)_100%)] px-3 py-1 text-[11px] text-white/80 backdrop-blur-md">
           {isReady ? "Muonekano unaonekana kabla ya kucheza" : "Hakikisho linaandaliwa"}
         </div>
       </div>
 
-      <div className="mt-4 rounded-[1.3rem] border border-white/40 bg-[linear-gradient(135deg,rgba(2,18,24,0.99)_0%,rgba(0,54,66,0.98)_35%,rgba(0,116,91,0.95)_68%,rgba(198,145,45,0.90)_100%)] p-3 sm:p-4">
+      <div className="mt-4 rounded-[1.3rem]   bg-[linear-gradient(135deg,rgba(2,18,24,0.99)_0%,rgba(0,54,66,0.98)_35%,rgba(0,116,91,0.95)_68%,rgba(198,145,45,0.90)_100%)] p-3 sm:p-4">
         <div className="flex flex-wrap items-center gap-2">
           <button
             type="button"
             onClick={toggleMute}
-            className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] text-white transition hover:bg-[#02535F]"
+            className="flex h-10 w-10 items-center justify-center rounded-2xl   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] text-white transition hover:bg-[#02535F]"
             aria-label="Nyamazisha au washa sauti"
           >
             <Volume2
@@ -934,7 +934,7 @@ function ProtectedHlsVideoCard({
           <button
             type="button"
             onClick={replayVideo}
-            className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] text-white transition hover:bg-[#02535F]"
+            className="flex h-10 w-10 items-center justify-center rounded-2xl   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] text-white transition hover:bg-[#02535F]"
             aria-label="Anza tena"
           >
             <RotateCcw className="h-4 w-4" style={{ color: ACCENT }} />
@@ -943,7 +943,7 @@ function ProtectedHlsVideoCard({
           <button
             type="button"
             onClick={togglePlay}
-            className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] text-white transition hover:bg-[#02535F]"
+            className="flex h-10 w-10 items-center justify-center rounded-2xl   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] text-white transition hover:bg-[#02535F]"
             aria-label={isPlaying ? "Sitisha" : "Cheza"}
           >
             {isPlaying ? (
@@ -1044,7 +1044,7 @@ export default function QuranTranslationLandingPage() {
               className={`mx-auto flex items-center justify-between gap-3 rounded-[1.5rem] px-3 py-3 sm:rounded-[2rem] sm:px-4 ${glass}`}
             >
               <div className="flex min-w-0 items-center gap-3 sm:gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-full border border-[#F2C96B]/20 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] shadow-[0_0_22px_rgba(231,197,143,0.16)] sm:h-16 sm:w-16">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-full   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] shadow-[0_0_22px_rgba(231,197,143,0.16)] sm:h-16 sm:w-16">
                   <img
                     src={sanaLogo}
                     alt="Nembo ya Vituo vya Qurani vya Sana"
@@ -1063,7 +1063,7 @@ export default function QuranTranslationLandingPage() {
                   <a
                     key={item.href}
                     href={item.href}
-                    className="rounded-full border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] px-4 py-2 text-sm font-medium text-white/85 transition hover:border-[#F2C96B]/35 hover:bg-[#02535F] hover:text-[#FFF0C7]"
+                    className="rounded-full   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] px-4 py-2 text-sm font-medium text-white/85 transition  hover:bg-[#02535F] hover:text-[#FFF0C7]"
                   >
                     {item.label}
                   </a>
@@ -1073,7 +1073,7 @@ export default function QuranTranslationLandingPage() {
               <button
                 type="button"
                 onClick={() => setMenuOpen((v) => !v)}
-                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] md:hidden"
+                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] md:hidden"
               >
                 <Menu className="h-5 w-5" />
               </button>
@@ -1087,7 +1087,7 @@ export default function QuranTranslationLandingPage() {
                       key={item.href}
                       href={item.href}
                       onClick={() => setMenuOpen(false)}
-                      className="rounded-2xl border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] px-4 py-3 text-sm text-white/85 sm:text-base"
+                      className="rounded-2xl   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] px-4 py-3 text-sm text-white/85 sm:text-base"
                     >
                       {item.label}
                     </a>
@@ -1104,7 +1104,7 @@ export default function QuranTranslationLandingPage() {
                 initial="hidden"
                 animate="show"
                 variants={fadeUp}
-                className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#F2C96B]/20 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] px-4 py-2 text-xs backdrop-blur-md sm:text-sm"
+                className="mb-5 inline-flex items-center gap-2 rounded-full   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] px-4 py-2 text-xs backdrop-blur-md sm:text-sm"
                 style={{ color: ACCENT }}
               >
                 <Stars className="h-4 w-4" style={{ color: ACCENT }} />
@@ -1142,7 +1142,7 @@ export default function QuranTranslationLandingPage() {
               >
                 <a
                   href="#features"
-                  className="group inline-flex items-center justify-center gap-3 rounded-2xl border px-6 py-3.5 text-sm font-bold shadow-[0_8px_20px_rgba(8,8,32,0.24)] transition hover:scale-[1.02] sm:px-7 sm:py-4 sm:text-base"
+                  className="group inline-flex items-center justify-center gap-3 rounded-2xl  px-6 py-3.5 text-sm font-bold shadow-[0_8px_20px_rgba(8,8,32,0.24)] transition hover:scale-[1.02] sm:px-7 sm:py-4 sm:text-base"
                   style={{
                     backgroundColor: CTA_DARK,
                     borderColor: "rgba(243,231,179,0.18)",
@@ -1160,7 +1160,7 @@ export default function QuranTranslationLandingPage() {
                   href="https://youtube.com/@sana-sw?si=8vzS_LK5laBommO5"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center justify-center gap-3 rounded-2xl border border-white/15 bg-[#02535F] px-6 py-3.5 text-sm font-semibold text-white backdrop-blur-md transition hover:bg-white/15 sm:px-7 sm:py-4 sm:text-base"
+                  className="inline-flex items-center justify-center gap-3 rounded-2xl   bg-[#02535F] px-6 py-3.5 text-sm font-semibold text-white backdrop-blur-md transition hover:bg-white/15 sm:px-7 sm:py-4 sm:text-base"
                 >
                   <Play className="h-5 w-5" />
                   Tembelea chaneli yetu
@@ -1187,7 +1187,7 @@ export default function QuranTranslationLandingPage() {
                             ease: "easeInOut",
                           }
                     }
-                    className="rounded-3xl border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] p-3 text-center backdrop-blur-md shadow-[0_6px_16px_rgba(0,0,0,0.12)] sm:p-4"
+                    className="rounded-3xl   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] p-3 text-center backdrop-blur-md shadow-[0_6px_16px_rgba(0,0,0,0.12)] sm:p-4"
                   >
                     <div className="text-xl font-black sm:text-2xl" style={{ color: ACCENT }}>
                       {item.value}
@@ -1209,7 +1209,7 @@ export default function QuranTranslationLandingPage() {
                 transition={isMobile ? {} : { duration: 7, repeat: Infinity, ease: "easeInOut" }}
                 className={`relative mx-auto max-w-2xl p-3 sm:p-4 ${softCard}`}
               >
-                <div className="rounded-[1.6rem] border border-white/40 bg-gradient-to-br from-white/10 to-white/5 p-4 sm:p-6">
+                <div className="rounded-[1.6rem]   bg-gradient-to-br from-white/10 to-white/5 p-4 sm:p-6">
                   <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                     <div>
                       <p className="text-xs text-white/60 sm:text-sm">Lugha ya sasa</p>
@@ -1217,12 +1217,12 @@ export default function QuranTranslationLandingPage() {
                         Qur'an kwa Kiswahili
                       </h3>
                     </div>
-                    <div className="w-fit rounded-2xl border border-[#00A88A]/25 bg-[#00745B]/18 px-4 py-2 text-xs text-[#DDF7EF] sm:text-sm">
+                    <div className="w-fit rounded-2xl   bg-[#00745B]/18 px-4 py-2 text-xs text-[#DDF7EF] sm:text-sm">
                       Matangazo ya moja kwa moja
                     </div>
                   </div>
 
-                  <div className="mt-6 rounded-[1.4rem] border border-white/40 bg-[linear-gradient(135deg,rgba(2,18,24,0.99)_0%,rgba(0,54,66,0.98)_35%,rgba(0,116,91,0.95)_68%,rgba(198,145,45,0.90)_100%)] p-4 sm:mt-8 sm:p-6">
+                  <div className="mt-6 rounded-[1.4rem]   bg-[linear-gradient(135deg,rgba(2,18,24,0.99)_0%,rgba(0,54,66,0.98)_35%,rgba(0,116,91,0.95)_68%,rgba(198,145,45,0.90)_100%)] p-4 sm:mt-8 sm:p-6">
                     <div className="mb-4 flex items-start gap-3 text-sm text-white/80 sm:items-center sm:text-base">
                       <Headphones className="mt-0.5 h-5 w-5 shrink-0 text-[#76E3D0] sm:mt-0" />
                       <span>Sikiliza kisomo huku ukiona tafsiri ya maana za Qurani Tukufu</span>
@@ -1249,7 +1249,7 @@ export default function QuranTranslationLandingPage() {
                       {heroCards.map((item) => (
                         <div
                           key={item.label}
-                          className="rounded-2xl border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] p-3 sm:p-4"
+                          className="rounded-2xl   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] p-3 sm:p-4"
                         >
                           <div className="text-sm font-bold sm:text-lg" style={{ color: ACCENT }}>
                             {item.value}
@@ -1272,10 +1272,10 @@ export default function QuranTranslationLandingPage() {
                   return (
                     <div
                       key={item.title}
-                      className="w-full rounded-[1.4rem] border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] px-5 py-4 text-center backdrop-blur-md shadow-[0_6px_16px_rgba(0,0,0,0.12)] sm:min-w-[220px] sm:w-auto sm:rounded-[1.6rem]"
+                      className="w-full rounded-[1.4rem]   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] px-5 py-4 text-center backdrop-blur-md shadow-[0_6px_16px_rgba(0,0,0,0.12)] sm:min-w-[220px] sm:w-auto sm:rounded-[1.6rem]"
                     >
                       <div className="flex items-center justify-center gap-3">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] sm:h-11 sm:w-11">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-2xl   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] sm:h-11 sm:w-11">
                           <Icon className="h-5 w-5" style={{ color: ACCENT }} />
                         </div>
                         <div className="text-sm font-bold text-white sm:text-base">{item.title}</div>
@@ -1344,8 +1344,8 @@ export default function QuranTranslationLandingPage() {
 
               <div className="relative z-10">
                 <div className="grid gap-6 lg:grid-cols-2 lg:items-stretch lg:gap-8">
-                  <div className="rounded-[1.8rem] border border-white/40 bg-[linear-gradient(135deg,rgba(2,18,24,0.99)_0%,rgba(0,54,66,0.98)_35%,rgba(0,116,91,0.95)_68%,rgba(198,145,45,0.90)_100%)] p-4 sm:p-6">
-                    <div className="h-full rounded-2xl border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] p-4 sm:p-5">
+                  <div className="rounded-[1.8rem]   bg-[linear-gradient(135deg,rgba(2,18,24,0.99)_0%,rgba(0,54,66,0.98)_35%,rgba(0,116,91,0.95)_68%,rgba(198,145,45,0.90)_100%)] p-4 sm:p-6">
+                    <div className="h-full rounded-2xl   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] p-4 sm:p-5">
                       <h2 className="text-2xl font-black sm:text-3xl lg:text-4xl">
                         Ushirikiano wa utekelezaji unaoaminika
                       </h2>
@@ -1361,15 +1361,15 @@ export default function QuranTranslationLandingPage() {
                     </div>
                   </div>
 
-                  <div className="rounded-[1.8rem] border border-white/40 bg-[linear-gradient(135deg,rgba(2,18,24,0.99)_0%,rgba(0,54,66,0.98)_35%,rgba(0,116,91,0.95)_68%,rgba(198,145,45,0.90)_100%)] p-4 sm:p-6">
-                    <div className="flex h-full flex-col justify-center rounded-2xl border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] p-4 sm:p-5">
+                  <div className="rounded-[1.8rem]   bg-[linear-gradient(135deg,rgba(2,18,24,0.99)_0%,rgba(0,54,66,0.98)_35%,rgba(0,116,91,0.95)_68%,rgba(198,145,45,0.90)_100%)] p-4 sm:p-6">
+                    <div className="flex h-full flex-col justify-center rounded-2xl   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] p-4 sm:p-5">
                       <div className="text-sm text-white/60">Tovuti rasmi</div>
                       <div className="mt-2 text-xl font-bold sm:text-2xl">Jasco Media City</div>
                       <a
                         href="https://jascomediacity.net/"
                         target="_blank"
                         rel="noreferrer"
-                        className="mt-5 inline-flex w-fit items-center gap-2 rounded-2xl border border-[#F2C96B]/25 bg-[#F2C96B]/10 px-5 py-3 text-sm text-[#FFF0C7] transition hover:bg-white/12 sm:text-base"
+                        className="mt-5 inline-flex w-fit items-center gap-2 rounded-2xl   bg-[#F2C96B]/10 px-5 py-3 text-sm text-[#FFF0C7] transition hover:bg-white/12 sm:text-base"
                       >
                         Tembelea tovuti ya Jasco
                         <ExternalLink className="h-4 w-4" />
@@ -1551,7 +1551,7 @@ export default function QuranTranslationLandingPage() {
             >
               <div className="text-center">
                 <div
-                  className="inline-flex max-w-full items-center gap-3 rounded-full border border-white/40 bg-[#02535F] px-5 py-3 text-base font-semibold backdrop-blur-md shadow-[0_6px_16px_rgba(0,0,0,0.12)] sm:px-7 sm:py-4 sm:text-lg"
+                  className="inline-flex max-w-full items-center gap-3 rounded-full   bg-[#02535F] px-5 py-3 text-base font-semibold backdrop-blur-md shadow-[0_6px_16px_rgba(0,0,0,0.12)] sm:px-7 sm:py-4 sm:text-lg"
                   style={{ color: ACCENT }}
                 >
                   <Sparkles className="h-5 w-5 shrink-0" style={{ color: ACCENT }} />
@@ -1566,8 +1566,8 @@ export default function QuranTranslationLandingPage() {
               <div
                 className={`mt-8 rounded-[2rem] p-4 sm:p-6 md:p-8 ${gradientOuterCard}`}
               >
-                <div className="rounded-[2rem] border border-white/40 bg-[linear-gradient(135deg,rgba(2,18,24,0.99)_0%,rgba(0,54,66,0.98)_35%,rgba(0,116,91,0.95)_68%,rgba(198,145,45,0.90)_100%)] p-4 sm:p-6">
-                  <div className="rounded-[1.5rem] border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] p-4 sm:p-5">
+                <div className="rounded-[2rem]   bg-[linear-gradient(135deg,rgba(2,18,24,0.99)_0%,rgba(0,54,66,0.98)_35%,rgba(0,116,91,0.95)_68%,rgba(198,145,45,0.90)_100%)] p-4 sm:p-6">
+                  <div className="rounded-[1.5rem]   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] p-4 sm:p-5">
                     <div className="mb-4 text-xl font-bold sm:text-2xl">Wasiliana nasi</div>
                     <div className="space-y-3 text-white/75">
                       <div className="rounded-2xl bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] px-4 py-3 text-sm sm:text-base">
@@ -1575,7 +1575,7 @@ export default function QuranTranslationLandingPage() {
                       </div>
                       <a
                         href="mailto:snachannel159@gmail.com"
-                        className="flex items-center justify-center gap-3 rounded-2xl border border-[#F2C96B]/24 bg-[#F2C96B]/10 px-4 py-3 text-center text-sm font-semibold text-[#FFF0C7] transition hover:bg-white/12 sm:text-base"
+                        className="flex items-center justify-center gap-3 rounded-2xl   bg-[#F2C96B]/10 px-4 py-3 text-center text-sm font-semibold text-[#FFF0C7] transition hover:bg-white/12 sm:text-base"
                       >
                         <Mail className="h-4 w-4" style={{ color: ACCENT }} />
                         Tuma
@@ -1591,9 +1591,9 @@ export default function QuranTranslationLandingPage() {
             <div className={`rounded-[2rem] px-4 py-6 sm:px-6 sm:py-8 lg:px-10 ${glass}`}>
               <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr_1fr]">
                 <div
-                  className={`rounded-[1.8rem] border border-white/40 p-4 text-center sm:p-6 ${INNER_GRADIENT} flex h-full flex-col items-center justify-center`}
+                  className={`rounded-[1.8rem]   p-4 text-center sm:p-6 ${INNER_GRADIENT} flex h-full flex-col items-center justify-center`}
                 >
-                  <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-white/15 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] shadow-[0_0_18px_rgba(255,255,255,0.06)] backdrop-blur-md sm:h-24 sm:w-24">
+                  <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] shadow-[0_0_18px_rgba(255,255,255,0.06)] backdrop-blur-md sm:h-24 sm:w-24">
                     <img
                       src={sanaLogo}
                       alt="Nembo ya Sana"
@@ -1604,7 +1604,7 @@ export default function QuranTranslationLandingPage() {
                   </div>
 
                   <div className="mt-4">
-                    <span className="inline-flex rounded-full border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] px-4 py-2 text-xs text-white/90 sm:px-5 sm:text-sm">
+                    <span className="inline-flex rounded-full   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] px-4 py-2 text-xs text-white/90 sm:px-5 sm:text-sm">
                       Vituo vya Qurani vya Sana
                     </span>
                   </div>
@@ -1613,16 +1613,16 @@ export default function QuranTranslationLandingPage() {
                     Sana... Ujumbe kwa walimwengu
                   </div>
 
-                  <p className="mx-auto mt-4 max-w-[30rem] rounded-[1.4rem] border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] px-4 py-4 text-sm leading-7 text-white/78 sm:px-5 sm:text-base sm:leading-8">
+                  <p className="mx-auto mt-4 max-w-[30rem] rounded-[1.4rem]   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] px-4 py-4 text-sm leading-7 text-white/78 sm:px-5 sm:text-base sm:leading-8">
                     Vituo vya sauti na picha vya tafsiri za maana za Qurani Tukufu kwa lugha zote
                     za kimataifa, katika mradi wa wakfu unaounganisha uzuri wa uwasilishaji, usahihi wa maana, na roho
                     Ujumbe.
                   </p>
                 </div>
 
-                <div className="rounded-[1.6rem] border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] p-4 sm:p-5 flex flex-col items-center justify-center text-center">
+                <div className="rounded-[1.6rem]   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] p-4 sm:p-5 flex flex-col items-center justify-center text-center">
                   <div className="mb-5 flex flex-col items-center justify-center gap-4 text-lg font-bold text-white sm:text-xl">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] shadow-[0_8px_18px_rgba(0,0,0,0.14)]">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] shadow-[0_8px_18px_rgba(0,0,0,0.14)]">
                       <MessageCircle className="h-6 w-6" style={{ color: ACCENT }} />
                     </div>
                     <span>Maelezo yetu</span>
@@ -1631,24 +1631,24 @@ export default function QuranTranslationLandingPage() {
                   <div className="w-full space-y-4 text-white/72">
                     <a
                       href="mailto:snachannel159@gmail.com"
-                      className="flex items-center justify-center gap-3 break-all rounded-2xl border border-white/40 bg-[linear-gradient(135deg,rgba(2,18,24,0.99)_0%,rgba(0,54,66,0.98)_35%,rgba(0,116,91,0.95)_68%,rgba(198,145,45,0.90)_100%)] px-4 py-3 text-sm transition hover:bg-[#02535F] sm:text-base"
+                      className="flex items-center justify-center gap-3 break-all rounded-2xl   bg-[linear-gradient(135deg,rgba(2,18,24,0.99)_0%,rgba(0,54,66,0.98)_35%,rgba(0,116,91,0.95)_68%,rgba(198,145,45,0.90)_100%)] px-4 py-3 text-sm transition hover:bg-[#02535F] sm:text-base"
                     >
                       <Mail className="h-4 w-4 shrink-0" style={{ color: ACCENT }} />
                       snachannel159@gmail.com
                     </a>
 
-                    <div className="flex items-center justify-center gap-3 rounded-2xl border border-white/40 bg-[linear-gradient(135deg,rgba(2,18,24,0.99)_0%,rgba(0,54,66,0.98)_35%,rgba(0,116,91,0.95)_68%,rgba(198,145,45,0.90)_100%)] px-4 py-3 text-sm sm:text-base">
+                    <div className="flex items-center justify-center gap-3 rounded-2xl   bg-[linear-gradient(135deg,rgba(2,18,24,0.99)_0%,rgba(0,54,66,0.98)_35%,rgba(0,116,91,0.95)_68%,rgba(198,145,45,0.90)_100%)] px-4 py-3 text-sm sm:text-base">
                       <MapPin className="h-4 w-4 shrink-0" style={{ color: ACCENT }} />
                       Amman - Jordan
                     </div>
                   </div>
 
-                  <div className="mt-6 w-full rounded-[1.4rem] border border-white/40 bg-[linear-gradient(135deg,rgba(2,18,24,0.99)_0%,rgba(0,54,66,0.98)_35%,rgba(0,116,91,0.95)_68%,rgba(198,145,45,0.90)_100%)] p-4">
+                  <div className="mt-6 w-full rounded-[1.4rem]   bg-[linear-gradient(135deg,rgba(2,18,24,0.99)_0%,rgba(0,54,66,0.98)_35%,rgba(0,116,91,0.95)_68%,rgba(198,145,45,0.90)_100%)] p-4">
                     <a
                       href="https://www.facebook.com/share/1BNZBu6soM/"
                       target="_blank"
                       rel="noreferrer"
-                      className="flex items-center justify-center gap-2 rounded-xl border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] py-3 text-sm font-semibold text-white transition hover:scale-[1.01] hover:bg-[#02535F]"
+                      className="flex items-center justify-center gap-2 rounded-xl   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] py-3 text-sm font-semibold text-white transition hover:scale-[1.01] hover:bg-[#02535F]"
                     >
                       <Globe className="h-4 w-4" style={{ color: ACCENT }} />
                       Tufuate kwenye Facebook
@@ -1660,15 +1660,15 @@ export default function QuranTranslationLandingPage() {
                   </div>
                 </div>
 
-                <div className="rounded-[1.8rem] border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] p-4 backdrop-blur-md sm:p-5 flex flex-col items-center justify-center text-center">
+                <div className="rounded-[1.8rem]   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] p-4 backdrop-blur-md sm:p-5 flex flex-col items-center justify-center text-center">
                   <div className="mb-5 flex flex-col items-center justify-center gap-4 text-lg font-bold text-white sm:text-xl">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] shadow-[0_8px_18px_rgba(0,0,0,0.14)]">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] shadow-[0_8px_18px_rgba(0,0,0,0.14)]">
                       <Link2 className="h-6 w-6" style={{ color: ACCENT }} />
                     </div>
                     <span>Viungo vya programu yetu</span>
                   </div>
 
-                  <div className="w-full rounded-[1.4rem] border border-white/40 bg-[linear-gradient(135deg,rgba(2,18,24,0.99)_0%,rgba(0,54,66,0.98)_35%,rgba(0,116,91,0.95)_68%,rgba(198,145,45,0.90)_100%)] p-4">
+                  <div className="w-full rounded-[1.4rem]   bg-[linear-gradient(135deg,rgba(2,18,24,0.99)_0%,rgba(0,54,66,0.98)_35%,rgba(0,116,91,0.95)_68%,rgba(198,145,45,0.90)_100%)] p-4">
                     <p className="mb-4 text-sm leading-7 text-white/65">
                       Pakua programu na anza kufuatilia maudhui ya Qurani kwa urahisi kupitia majukwaa rasmi.
                     </p>
@@ -1678,10 +1678,10 @@ export default function QuranTranslationLandingPage() {
                         href="https://play.google.com/store/apps/details?id=com.sana_all&pcampaignid=web_share"
                         target="_blank"
                         rel="noreferrer"
-                        className="group rounded-[1.3rem] border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] p-4 transition hover:-translate-y-0.5 hover:bg-[#02535F]"
+                        className="group rounded-[1.3rem]   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] p-4 transition hover:-translate-y-0.5 hover:bg-[#02535F]"
                       >
                         <div className="flex items-center justify-center gap-3">
-                          <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] text-white">
+                          <div className="flex h-12 w-12 items-center justify-center rounded-2xl   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] text-white">
                             <GooglePlayIcon />
                           </div>
                           <span className="whitespace-nowrap text-sm font-bold text-white sm:text-base">
@@ -1694,10 +1694,10 @@ export default function QuranTranslationLandingPage() {
                         href="https://apps.apple.com/us/app/sana-tv-%D8%B3%D9%86%D8%A7/id6742054715"
                         target="_blank"
                         rel="noreferrer"
-                        className="group rounded-[1.3rem] border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] p-4 transition hover:-translate-y-0.5 hover:bg-[#02535F]"
+                        className="group rounded-[1.3rem]   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] p-4 transition hover:-translate-y-0.5 hover:bg-[#02535F]"
                       >
                         <div className="flex items-center justify-center gap-3">
-                          <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/40 bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] text-white">
+                          <div className="flex h-12 w-12 items-center justify-center rounded-2xl   bg-[linear-gradient(135deg,rgba(255,255,255,0.115)_0%,rgba(0,116,91,0.145)_50%,rgba(198,145,45,0.105)_100%)] text-white">
                             <AppStoreIcon />
                           </div>
                           <span className="text-sm font-bold text-white sm:text-base">
@@ -1707,7 +1707,7 @@ export default function QuranTranslationLandingPage() {
                       </a>
                     </div>
 
-                    <div className="mt-5 rounded-[1.4rem] border border-white/40 bg-[linear-gradient(135deg,rgba(2,18,24,0.99)_0%,rgba(0,54,66,0.98)_35%,rgba(0,116,91,0.95)_68%,rgba(198,145,45,0.90)_100%)] p-4">
+                    <div className="mt-5 rounded-[1.4rem]   bg-[linear-gradient(135deg,rgba(2,18,24,0.99)_0%,rgba(0,54,66,0.98)_35%,rgba(0,116,91,0.95)_68%,rgba(198,145,45,0.90)_100%)] p-4">
                       <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-white/65">
                         <span>⭐ Ukadiriaji 4.9</span>
                         <span>🌍 Nchi 100+</span>
@@ -1717,7 +1717,7 @@ export default function QuranTranslationLandingPage() {
                         href="https://youtube.com/@sana-sw?si=8vzS_LK5laBommO5"
                         target="_blank"
                         rel="noreferrer"
-                        className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl border border-[#F2C96B]/24 bg-[#F2C96B]/10 py-3 text-sm font-bold text-[#FFF0C7] transition hover:scale-[1.01] hover:bg-white/12"
+                        className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl   bg-[#F2C96B]/10 py-3 text-sm font-bold text-[#FFF0C7] transition hover:scale-[1.01] hover:bg-white/12"
                       >
                         <Sparkles className="h-4 w-4" />
                         Anza sasa
@@ -1727,7 +1727,7 @@ export default function QuranTranslationLandingPage() {
                 </div>
               </div>
 
-              <div className="mt-8 border-t border-white/40 pt-5 text-center text-xs text-white/55 sm:text-sm">
+              <div className="mt-8   pt-5 text-center text-xs text-white/55 sm:text-sm">
                 Haki zote zimehifadhiwa © Vituo vya Qurani vya Sana.
               </div>
             </div>
