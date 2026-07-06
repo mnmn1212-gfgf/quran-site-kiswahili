@@ -1339,7 +1339,7 @@ export default function QuranTranslationLandingPage() {
               className={`relative overflow-hidden p-5 sm:p-6 md:p-10 ${gradientOuterCard}`}
             >
               {!isMobile && (
-                <div className="absolute inset-0 bg-[#021218]" />
+                <div className={`absolute inset-0 ${OUTER_GRADIENT}`} />
               )}
 
               <div className="relative z-10">
